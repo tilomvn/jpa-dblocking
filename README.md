@@ -1,1 +1,1 @@
-* Spring Data JPA Optimistic and Pessimitic Locking Failure Demostration
+* Spring Data JPA OptimisticLock and PessimisticLock Demostration
