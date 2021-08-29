@@ -35,10 +35,14 @@ public class LockingEntity {
 	}
 
 	public short getVersion() {
-		return 0;
+		return version;
 	}
 
 	public void setVersion(short version) {
-        //this.version = version;
+        this.version = version;
+	}
+
+	public String getName() {
+		return name;
 	}
 }
