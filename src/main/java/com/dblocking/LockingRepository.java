@@ -10,10 +10,7 @@ import org.springframework.data.jpa.repository.Lock;
 
 public interface LockingRepository extends JpaRepository<LockingEntity, Long>, JpaSpecificationExecutor<LockingEntity> {
 
-    // @Lock(LockModeType.OPTIMISTIC)
-    Optional<LockingEntity> findById(Long id);
-
-    // @Lock(LockModeType.OPTIMISTIC)
-    // Optional<LockingEntity> findById(Long Id);
+    // @Lock(LockModeType.PESSIMISTIC_WRITE)
+    Optional<LockingEntity> findById(Long Id);
 
 }

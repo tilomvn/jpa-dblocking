@@ -28,18 +28,14 @@ public class LockingEntity {
     String name;
 
     @Version
-    short version = 1;
+    long version;
 
 	public void setName(String name) {
         this.name = name;
 	}
 
-	public short getVersion() {
+	public long getVersion() {
 		return version;
-	}
-
-	public void setVersion(short version) {
-        this.version = version;
 	}
 
 	public String getName() {
