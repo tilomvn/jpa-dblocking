@@ -8,10 +8,10 @@
 		<version>2.5.3</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.dblocking</groupId>
-	<artifactId>DbLocking</artifactId>
+	<groupId>com.spring.data</groupId>
+	<artifactId>jpa-dblocking</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>DbLocking</name>
+	<name>jpa-dblocking</name>
 	<description>Database Locking Demostration</description>
 	<properties>
 		<java.version>1.8</java.version>
