@@ -1,4 +1,4 @@
-package com.dblocking;
+package com.spring.data.jpa.dblocking;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -6,16 +6,16 @@ import javax.persistence.Id;
 import javax.persistence.Version;
 
 @Entity
-public class LockingEntity {
+class LockingEntity {
 
-    public LockingEntity() {}
+    LockingEntity() {}
 
-    public LockingEntity(Long id, String name) {
+    LockingEntity(Long id, String name) {
         this.id = id;
         this.name = name;
     }
     
-    public LockingEntity(Long id, String name, short version) {
+    LockingEntity(Long id, String name, short version) {
         this.id = id;
         this.name = name;
         this.version = version;
@@ -30,15 +30,15 @@ public class LockingEntity {
     @Version
     long version;
 
-	public void setName(String name) {
+	void setName(String name) {
         this.name = name;
 	}
 
-	public long getVersion() {
+	long getVersion() {
 		return version;
 	}
 
-	public String getName() {
+	String getName() {
 		return name;
 	}
 }

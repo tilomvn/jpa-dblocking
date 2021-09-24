@@ -1,4 +1,4 @@
-package com.dblocking;
+package com.spring.data.jpa.dblocking;
 
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
@@ -15,6 +15,10 @@ import javax.persistence.criteria.Predicate;
 import javax.persistence.criteria.Root;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.orm.ObjectOptimisticLockingFailureException;
+
+import com.spring.data.jpa.dblocking.LockingEntity;
+import com.spring.data.jpa.dblocking.LockingRepository;
+
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
@@ -27,7 +31,7 @@ import org.springframework.dao.PessimisticLockingFailureException;
 
 @DataJpaTest
 @TestInstance(Lifecycle.PER_CLASS)
-public class DbLockingTests {
+class DbLockingTests {
 
     Logger log = LoggerFactory.getLogger(this.getClass());
 
@@ -49,7 +53,7 @@ public class DbLockingTests {
      * https://blog.mimacom.com/testing-pessimistic-locking-handling-spring-boot-jpa/
      * Must use @Lock on method
      */
-    // @Test
+    //@Test
     void testPessimisticLockException() throws Exception {
         LockingEntity entity = lockingRepository.findById(1L).orElse(null);
         new Thread(() -> {
