@@ -41,4 +41,8 @@ class LockingEntity {
 	String getName() {
 		return name;
 	}
+
+	Long getId() {
+		return id;
+	}
 }
