@@ -16,10 +16,11 @@ interface LockingRepository extends JpaRepository<LockingEntity, Long>, JpaSpeci
 
 //    @Lock(LockModeType.PESSIMISTIC_WRITE)
 //    @QueryHints({@QueryHint(name = "javax.persistence.lock.timeout", value = "3000")})
-	@Lock(LockModeType.OPTIMISTIC_FORCE_INCREMENT)
+//	@Lock(LockModeType.OPTIMISTIC_FORCE_INCREMENT)
     Optional<LockingEntity> findById(Long id);
 
 //    @Lock(LockModeType.PESSIMISTIC_WRITE)
 //    @QueryHints({@QueryHint(name = "javax.persistence.lock.timeout", value = "3000")})
+	@Lock(LockModeType.OPTIMISTIC_FORCE_INCREMENT)
     List<LockingEntity> findByIdIn(Collection<Long> ids);
 }
